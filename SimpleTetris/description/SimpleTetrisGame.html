@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+        <meta charset="utf-8"> 
+        <title>Clear Board Game</title>
+        <link rel="stylesheet" href="SimpleTetrisGame_files/ClearCellGame.css">
+</head>
+
+<body>
+
+<div id="contents">
+
+<div id="header">
+<p>SimpleTetris Game<br>
+</p>
+</div>
+
+<h2>Overview</h2>
+
+<p>For this project you will implement code for a game named <strong>Simple Tetris game</strong>. The game's goal is to maximize the number of cleared
+cells in a colored board. </p>
+
+<p>We will provide the graphical user interface (GUI) and you need to develop
+the code that implements the rules of the game. A video illustrating the
+collapse game can be found at <a href="video/Video.html">Game Video</a>.  Keep
+in mind that you can finish this project without ever playing the game through
+the GUI.  Also, keep in mind that you should not debug your code using the GUI
+(student tests are preferable).</p>
+
+<h2>Objectives</h2>
+
+<p>This project will allow you practice two-dimensional arrays, abstract
+classes, and test development. </p>
+
+<h2>Grading</h2>
+<ul>
+  <li>(90%) Correctness<strong> </strong></li>
+  <li>(10%) Style</li>
+</ul>
+
+<h2>Code Distribution</h2>
+
+<p>
+  The code distribution provides you with the following:
+</p>
+
+<ul>
+  <li><strong>gui package </strong> → Represents the graphical user
+    interface for the game. Executing the main method of this class will
+    allow you to play the game.</li>
+  <li><strong>model package </strong> → Includes the classes you need to
+    implement.</li>
+  <li><strong>tests package </strong> → Includes the public test
+  model.</li>
+  <li><strong>Text files </strong> → Represent the expected output for
+    public tests.</li>
+</ul>
+
+<h2>Specifications</h2>
+
+<p>You are expected to implement methods for the Game and
+Simpletetris classes. The other classes have been provided and you should
+not modify them. You should familiarize yourself with the BoardCell class.
+The javadoc describing what you must implement can be found at 
+<a href="doc/index.html">Project Javadoc</a>.</p>
+
+<p>Notice you are not required to write student tests for credit, however,
+if you need assistance during office hours you need to bring student tests
+that illustrates the problem you are experiencing.  Also, keep in mind the
+percentage associated with secret tests is high, so you need to test your
+project thoroughly.</p>
+
+<h2>Requirements</h2>
+<ul>
+  <li>You may not use recursion during the implementation of the expected
+    methods. If you don't know what recursion is don't worry about it (it is
+    something we will cover later in the semester). </li>
+  <li>Clearing one cell represents one point.</li>
+  <li><strong>Notice that when a cell is clicked, one or more rows might be cleared as a result.
+  Your program must collapsed all those rows.</strong></li>
+  <li>While checking the cells surrounding a particular one, do not use out of bounds
+  exceptions to implement the expected processing.  You should verify whether a particular
+  cell access is legal or not before attempting such access.
+  </li>
+  <li>
+    Additional information about the game clearing rules can be
+    found at <a href="ClearingRules.html">clearing rules</a>.  If you have any
+    doubts about the clearing rules, please see us during office hours
+    or in lecture.
+  </li>
+  <li>You may not use ArrayList for this project.</li>
+  <li>You may not add any classes, but feel free to add any instance variables
+    and private methods you understand are necessary. </li>
+  <li>
+    You will not be graded in terms of code coverage information provided by the
+    submit server, although having a high code coverage is highly recommended (and
+    encouraged).
+  </li>
+  <li><strong>IMPORTANT</strong> → If you have a problem with your code
+    and need assistance during office hours, you need to have a student
+    test(s) that illustrates the problem you are experiencing. </li>
+  <li>See <a href="StudentTests.html">StudentTests.html</a>
+    for information regarding the implementation of student tests for this
+    project. </li>
+   <li>See <a href="StyleGuidelines.html">Style Guidelines</a> for information
+      regarding style.
+   </li>
+
+   <li>We cannot provide any information regarding release nor secret tests.
+         Once your project has been graded, you can see a TA if you would
+         like to find out why you failed a release or secret test.
+   </li>
+
+   <li> The Random object parameter of  the SimpleTetris constructor is a 
+         reference you will store as an instance variable of the 
+         SimpleTetris class.  This object will be used while calling
+         the getNonEmptyRandomBoardCell method of the BoardCell class.
+         This is the only use you will have for this object (do not
+         use it for anything else).
+   </li>  
+</ul>
+
+<h2>Suggestions on How To Start the Project</h2>
+<ul>
+  <li>Study the public tests before starting implementing your project. </li>
+  <li>Notice that you can implement this project without using the GUI at
+    all. </li>
+</ul>
+</div>
+<!-- Footer Section -->
+
+<div id="footer">
+<h2>Submission</h2>
+
+<p>
+    Submit your project to Blackboard.</p>
+</div>
+
+
+</body></html>

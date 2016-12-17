@@ -1,0 +1,11 @@
+# Submit server .submit file for
+#  Course CMSC132
+#  Project 5: Image Blocks
+
+courseName=CMSC132
+semester=201505
+projectNumber=5
+courseKey=7c54bdc9f6c780e9
+authentication.type=ldap
+baseURL=https://submit.cs.umd.edu:443/summer2015
+submitURL=https://submit.cs.umd.edu:443/summer2015/eclipse/SubmitProjectViaEclipse

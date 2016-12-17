@@ -1,0 +1,182 @@
+<!doctype html>
+<html>
+  <head> 
+        <meta charset="utf-8" />		
+        <title>Linked Lists</title>
+        <link rel="stylesheet" href="LinkedListsProject.css" type="text/css" />
+  </head>
+
+<body>
+
+<div id="contents">
+
+<div id="header">
+<p><strong>Project:</strong> Doubly Linked Lists </p>
+</div>
+
+<h2>Overview</h2>
+
+<p>For this project you will implement a basic doubly linked and a sorted doubly linked list.
+Notice that no public tests are part of this project as all tests are either
+release or secret.
+</p>
+
+<h2>Objectives</h2>
+
+<p>This project will allow you practice doubly linked lists and testing.</p>
+
+<h2>Grading</h2>
+<ul>
+    
+  <li>(90%) Correctness (Tests)</li>
+  <li>(10%) Style</li>
+</ul>
+
+<h2>Code Distribution</h2>
+
+<p>The project's code distribution is available by checking out the project
+  named LinkedListsProject. The code distribution provides you with the following:
+</p>
+<ul>
+  <li><strong>listClasses package </strong>&rarr; Where classes implementing linked lists will appear.</li>
+  <li><strong>tests package </strong> &rarr; Where you should place your student tests.</li>
+</ul>
+
+<h2>Specifications</h2>
+
+<ul>
+    <li>You are expected to implement two classes: BasicDoubleLinkedList and SortedDoubleLinkedList.The javadoc describing
+        what you need to implement can be found at
+        <a href="doc/index.html">Project Javadoc</a>.
+    </li>
+
+    <li>
+       The linked list in our project has a head and tail reference. 
+       The next link of the last node points to null.  
+    </li>
+
+    <li>
+       Methods addToEnd(), getLast(), retrieveLastElement() rely 
+      (and must use) the tail reference.  
+    </li>
+
+    <li>
+       The head and tail must be set correctly when list operations
+       update the list.
+    </li>
+
+    <li>
+       Your code must be efficient.  For example, you will lose credit if 
+       you perform an unnecessary list traversal(s) during the implementation 
+       of a method. Keep in mind this is a doubly linked list.
+    </li>    
+
+    <li>
+        If you see in the submit server the error "missing_component", the problem is that you
+        are missing a required class.  You can also get this error if you are not defining a generic
+        class correctly.  For example, your SortedLinkedList class is not being defined as expected.
+
+        It is recommended that you try submitting your project immediately (if you have not done
+        so yet) so you can identify this problem (your code may work in Eclipse but not in the submit server).
+    </li>
+</ul>
+
+<h2>Requirements</h2>
+<ul>
+  <li>You may not use recursion in this project.</li>
+  
+  <li>For this project you are not required to write student tests, but you are strongly
+  encourage to do so.  If you have a problem with your code and need assistance during
+  office hours, you need to have a student test(s) that illustrates the problem you are
+  experiencing. See <a href="http://www.cs.umd.edu/class/summer2015/cmsc132/resources/StudentTests.html">Student Tests</a>
+  for information regarding the implementation of student tests.</li>
+  
+  <li>
+    The iterator you define may NOT be used to implement other list operations (e.g., add).
+    The iterator is for users that want to iterate over the list.
+  </li>
+  
+  <li>
+    You need to implement a doubly-linked list that relies on a head and tail reference.
+  </li>
+  
+  <li>See <a href="http://www.cs.umd.edu/class/summer2015/cmsc132/resources/StyleGuidelines.html">Style
+      Guidelines</a> for information regarding style.
+  </li>
+</ul>
+
+
+
+<h2>Sample Driver</h2>
+<p>
+    The following driver and associated output provide an idea of the classes you need
+    to implement.
+</p>
+
+<pre>
+
+package tests;
+
+import listClasses.BasicDoubleLinkedList;
+import listClasses.SortedDoubleLinkedList;
+
+public class SampleDriver {
+
+	public static void main(String[] args) {
+		BasicDoubleLinkedList<String> basicList = new BasicDoubleLinkedList<String>();
+
+		basicList.addToEnd("Red").addToFront("Yellow").addToFront("Blue");
+		System.out.println("First: " + basicList.getFirst());
+		System.out.println("Last: " + basicList.getLast());
+		System.out.println("Size: " + basicList.getSize());
+		System.out.println("Retrieve First: " + basicList.retrieveFirstElement());
+		System.out.println("Retrieve Last: " + basicList.retrieveLastElement());
+		System.out.println("Removing Red");
+		basicList.remove("Red", String.CASE_INSENSITIVE_ORDER);
+		System.out.print("Iteration: ");
+		for (String entry : basicList) {
+			System.out.print(entry + " ");
+		}
+		
+		SortedDoubleLinkedList<String> sortedList = new SortedDoubleLinkedList<String>(String.CASE_INSENSITIVE_ORDER);
+		sortedList.add("Yellow").add("Red");
+		System.out.print("\n\nIteration (for sorted list): ");
+		for (String entry : sortedList) {
+			System.out.print(entry + " ");
+		}
+		sortedList.remove("Red");
+		System.out.print("\nAfter remove in sorted list first is: ");
+		System.out.println(sortedList.getFirst());
+	}
+}
+
+
+Output
+
+First: Blue
+Last: Red
+Size: 3
+Retrieve First: Blue
+Retrieve Last: Red
+Removing Red
+Iteration: Yellow 
+
+Iteration (for sorted list): Red Yellow 
+After remove in sorted list first is: Yellow
+
+</pre>
+
+
+</div>
+
+<!-- Footer Section -->
+<div id="footer">
+<h2>Submission</h2>
+
+<ul>
+    <li>Submit your project to Blackboard.
+</li>
+</ul>
+</div>
+</body>
+</html>
